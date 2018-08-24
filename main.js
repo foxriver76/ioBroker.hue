@@ -536,7 +536,7 @@ function processCommands() {
     const now = Date.now();
 
     if (processing) {
-        if (polling && commands[0].func === 'setLightState') {
+        if (polling && commands[1].func === 'setLightState') {
             // if polling force executing of commands
             // we may send only 10 commands in 10 seconds
             if (times.length >= 10) {
